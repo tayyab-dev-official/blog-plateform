@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Development - Keshf LMS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">Keshf LMS</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Log In</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="course-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &gt;
+                <a href="courses.html">Courses</a> &gt;
+                <span>Modern Web Development</span>
+            </div>
+            <div class="course-intro">
+                <div class="course-intro-details">
+                    <span class="course-category">Development</span>
+                    <h1>Modern Web Development</h1>
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.8 Rating (245 reviews)</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-users"></i>
+                            <span>1,245 Students Enrolled</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Last Updated: March 15, 2025</span>
+                        </div>
+                    </div>
+                    <p class="course-intro-text">Master front-end and back-end development with this comprehensive course. Learn to build modern, responsive websites and web applications using the latest technologies and best practices.</p>
+                    <div class="instructor">
+                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Instructor">
+                        <div class="instructor-info">
+                            <span>Created by</span>
+                            <h3>Dr. Alex Johnson</h3>
+                            <p>Lead Developer & Web Instructor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-intro-card">
+                    <div class="preview-image">
+                        <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg" alt="Web Development">
+                        <a href="#" class="play-btn"><i class="fas fa-play"></i></a>
+                    </div>
+                    <div class="course-info-card">
+                        <div class="price-section">
+                            <div class="price">$129</div>
+                            <div class="discount">$199</div>
+                            <div class="discount-tag">35% off</div>
+                        </div>
+                        <div class="timer">
+                            <i class="fas fa-clock"></i> Special offer ends in: 2d 14h 36m
+                        </div>
+                        <div class="card-actions">
+                            <a href="checkout.html" class="btn btn-primary btn-block">Enroll Now</a>
+                            <a href="#" class="btn btn-outline btn-block">Add to Wishlist</a>
+                        </div>
+                        <div class="course-includes">
+                            <h4>This course includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-video"></i> 45 hours of video</li>
+                                <li><i class="fas fa-file"></i> 72 articles</li>
+                                <li><i class="fas fa-download"></i> 25 downloadable resources</li>
+                                <li><i class="fas fa-mobile-alt"></i> Mobile and TV access</li>
+                                <li><i class="fas fa-certificate"></i> Certificate of completion</li>
+                                <li><i class="fas fa-infinity"></i> Full lifetime access</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content">
+        <div class="container">
+            <div class="content-layout">
+                <div class="main-content">
+                    <div class="course-tabs">
+                        <ul class="tab-menu">
+                            <li class="active" data-target="overview">Overview</li>
+                            <li data-target="curriculum">Curriculum</li>
+                            <li data-target="reviews">Reviews</li>
+                            <li data-target="instructor">Instructor</li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="overview">
+                                <h2>About This Course</h2>
+                                <p>The Modern Web Development course is designed for aspiring web developers who want to build professional, dynamic websites. Whether you're a beginner or looking to enhance your existing skills, this course provides a comprehensive pathway to becoming a proficient full-stack web developer.</p>
+                                
+                                <h3>What You'll Learn</h3>
+                                <ul class="course-objectives">
+                                    <li>Build responsive websites using HTML5, CSS3, and modern JavaScript</li>
+                                    <li>Develop interactive front-end applications with React</li>
+                                    <li>Create robust back-end APIs using Node.js and Express</li>
+                                    <li>Design and manage databases with MongoDB and SQL</li>
+                                    <li>Implement authentication and security best practices</li>
+                                    <li>Deploy web applications to cloud platforms</li>
+                                    <li>Optimize web performance and implement SEO fundamentals</li>
+                                </ul>
+                                
+                                <h3>Prerequisites</h3>
+                                <p>Basic understanding of HTML, CSS, and JavaScript is helpful but not required. This course starts with fundamentals and progressively advances to more complex topics.</p>
+                                
+                                <h3>Who This Course is For</h3>
+                                <ul>
+                                    <li>Beginners with no prior web development experience</li>
+                                    <li>Intermediate developers looking to expand their skills</li>
+                                    <li>Anyone looking to transition into a web development career</li>
+                                    <li>Professionals who want to create their own web applications</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tab-pane" id="curriculum">
+                                <h2>Course Curriculum</h2>
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <span class="module-title">Module 1: Web Development Fundamentals</span>
+                                            <span class="module-meta">4 lessons • 3h 45m</span>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <div class="accordion-content">
+                                            <ul class="lesson-list">
+                                                <li>
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span class="lesson-title">Introduction to Web Development</span>
+                                                    <span class="lesson-duration">45:12</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span class="lesson-title">HTML5 Essentials</span>
+                                                    <span class="lesson-duration">57:30</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span class="lesson-title">CSS3 Fundamentals</span>
+                                                    <span class="lesson-duration">1:10:25</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-file-alt"></i>
+                                                    <span class="lesson-title">Assignment: Building Your First Webpage</span>
+                                                    <span class="lesson-duration">Practice</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <span class="module-title">Module 2: JavaScript Programming</span>
+                                            <span class="module-meta">6 lessons • 5h 30m</span>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <div class="accordion-content">
+                                            <ul class="lesson-list">
+                                                <li>
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span class="lesson-title">JavaScript Basics</span>
+                                                    <span class="lesson-duration">58:20</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-lock"></i>
+                                                    <span class="lesson-title">DOM Manipulation</span>
+                                                    <span class="lesson-duration">1:05:15</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-lock"></i>
+                                                    <span class="lesson-title">Event Handling</span>
+                                                    <span class="lesson-duration">52:40</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-lock"></i>
+                                                    <span class="lesson-title">AJAX and Fetch API</span>
+                                                    <span class="lesson-duration">1:12:10</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-lock"></i>
+                                                    <span class="lesson-title">ES6+ Features</span>
+                                                    <span class="lesson-duration">1:22:05</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <span class="module-title">Module 3: Front-end Frameworks</span>
+                                            <span class="module-meta">5 lessons • 6h 15m</span>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <div class="accordion-content">
+                                            <ul class="lesson-list">
+                                                <li>
+                                                    <i class="fas fa-lock"></i>
+                                                    <span class="lesson-title">Introduction to React</span>
+                                                    <span class="lesson-duration">1:15:30</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-lock"></i>
+                                                    <span class="lesson-title">React Components and Props</span>
+                                                    <span class="lesson-duration">1:25:45</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-lock"></i>
+                                                    <span class="lesson-title">State Management</span>
+                                                    <span class="lesson-duration">1:10:20</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="curriculum-note">
+                                    <p>+ 8 more modules (Backend Development, Databases, Authentication, Deployment and more)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="reviews">
+                                <div class="reviews-summary">
+                                    <div class="rating-average">
+                                        <h2>4.8</h2>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <p>Course Rating</p>
+                                    </div>
+                                    <div class="rating-breakdown">
+                                        <div class="rating-row">
+                                            <div class="stars">5 <i class="fas fa-star"></i></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 76%"></div>
+                                            </div>
+                                            <div class="percent">76%</div>
+                                        </div>
+                                        <div class="rating-row">
+                                            <div class="stars">4 <i class="fas fa-star"></i></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 18%"></div>
+                                            </div>
+                                            <div class="percent">18%</div>
+                                        </div>
+                                        <div class="rating-row">
+                                            <div class="stars">3 <i class="fas fa-star"></i></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 4%"></div>
+                                            </div>
+                                            <div class="percent">4%</div>
+                                        </div>
+                                        <div class="rating-row">
+                                            <div class="stars">2 <i class="fas fa-star"></i></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 1%"></div>
+                                            </div>
+                                            <div class="percent">1%</div>
+                                        </div>
+                                        <div class="rating-row">
+                                            <div class="stars">1 <i class="fas fa-star"></i></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 1%"></div>
+                                            </div>
+                                            <div class="percent">1%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="review-list">
+                                    <div class="review-item">
+                                        <div class="reviewer">
+                                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Emily Johnson">
+                                            <div class="reviewer-info">
+                                                <h4>Emily Johnson</h4>
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="review-date">March 15, 2025</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-content">
+                                            <p>This course exceeded my expectations! As someone with no prior web development experience, I found the explanations clear and the projects very practical. Within a month of finishing the course, I landed my first freelance gig building a small business website. The instructor is knowledgeable and responsive to questions.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="review-item">
+                                        <div class="reviewer">
+                                            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Marcus Chen">
+                                            <div class="reviewer-info">
+                                                <h4>Marcus Chen</h4>
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="review-date">February 28, 2025</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-content">
+                                            <p>I already had some experience with HTML and CSS, but this course helped me take my skills to the next level. The sections on React and Node.js were particularly valuable, and I appreciate the emphasis on best practices throughout. The course projects are challenging and closely mimic real-world scenarios.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="load-more">
+                                    <button class="btn btn-outline">Load More Reviews</button>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="instructor">
+                                <div class="instructor-profile">
+                                    <div class="instructor-header">
+                                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Dr. Alex Johnson">
+                                        <div class="instructor-info">
+                                            <h2>Dr. Alex Johnson</h2>
+                                            <p class="position">Lead Developer & Web Instructor</p>
+                                            <div class="instructor-stats">
+                                                <div class="stat-item">
+                                                    <i class="fas fa-star"></i>
+                                                    <span>4.9 Instructor Rating</span>
+                                                </div>
+                                                <div class="stat-item">
+                                                    <i class="fas fa-comment"></i>
+                                                    <span>1,245 Reviews</span>
+                                                </div>
+                                                <div class="stat-item">
+                                                    <i class="fas fa-users"></i>
+                                                    <span>15,630 Students</span>
+                                                </div>
+                                                <div class="stat-item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>8 Courses</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="instructor-bio">
+                                        <h3>About Me</h3>
+                                        <p>With over 15 years of experience in web development and software engineering, I've worked with companies ranging from startups to Fortune 500 enterprises. I hold a Ph.D. in Computer Science and have been teaching web development for the past 8 years.</p>
+                                        <p>My teaching philosophy centers on practical, project-based learning. I believe the best way to learn programming is by building real applications and understanding the underlying principles.</p>
+                                        <p>When I'm not coding or teaching, I contribute to open-source projects and speak at web development conferences around the world.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-courses">
+        <div class="container">
+            <h2 class="section-title">Related Courses You Might Like</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg" alt="Advanced JavaScript">
+                        <div class="course-category">Development</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Advanced JavaScript Programming</h3>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 8 weeks</span>
+                            <span><i class="fas fa-star"></i> 4.7 (189)</span>
+                        </div>
+                        <p>Master advanced JavaScript concepts like closures, prototypes, and asynchronous programming.</p>
+                        <div class="course-footer">
+                            <div class="price">$89</div>
+                            <a href="course-details.html" class="btn btn-outline">View Course</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://img.freepik.com/free-vector/flat-design-responsive-website-design_23-2149488772.jpg" alt="Responsive Design">
+                        <div class="course-category">Development</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Responsive Web Design Mastery</h3>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 6 weeks</span>
+                            <span><i class="fas fa-star"></i> 4.8 (215)</span>
+                        </div>
+                        <p>Create websites that look great on any device using modern CSS frameworks and techniques.</p>
+                        <div class="course-footer">
+                            <div class="price">$79</div>
+                            <a href="course-details.html" class="btn btn-outline">View Course</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://img.freepik.com/free-photo/top-view-person-writing-html-laptop_23-2150038880.jpg" alt="Full Stack Development">
+                        <div class="course-category">Development</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Full Stack Development with MERN</h3>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 14 weeks</span>
+                            <span><i class="fas fa-star"></i> 4.9 (327)</span>
+                        </div>
+                        <p>Build complete web applications with MongoDB, Express, React, and Node.js.</p>
+                        <div class="course-footer">
+                            <div class="price">$149</div>
+                            <a href="course-details.html" class="btn btn-outline">View Course</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Keshf LMS</h3>
+                    <p>Transforming education through innovative technology and engaging learning experiences since 2023.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@keshflms.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Education Street, Learning City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Keshf LMS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
