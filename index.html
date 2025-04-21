@@ -44,6 +44,46 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
+    <!-- Header Section with Navigation -->
+    <header class="main-header sticky-top">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Keshf LMS</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="#" data-bs-toggle="dropdown">Resources <i class="fas fa-chevron-down small ms-1"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Blog</a></li>
+                            <li><a class="dropdown-item" href="#">Documentation</a></li>
+                            <li><a class="dropdown-item" href="#">Community</a></li>
+                            <li><a class="dropdown-item" href="#">Tutorials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Log In</a>
+                <a href="signup.html" class="btn btn-signup ms-2">Sign Up</a>
+                <div class="cart-icon ms-3 position-relative">
+                    <a href="cart.html" class="text-dark fs-5"><i class="fas fa-shopping-cart"></i></a>
+                    <span class="cart-counter">0</span>
+                </div>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
     <!-- Hero Section with 3D animation -->
     <section class="hero-section position-relative overflow-hidden">
         <div class="hero-particles" id="hero-particles"></div>
@@ -53,8 +93,8 @@
                     <h1 class="display-3 fw-bold text-gradient mb-4">Learn Without Limits</h1>
                     <p class="lead mb-4">Access over 500+ courses from top instructors around the world. Interactive learning experiences designed for today's digital learners.</p>
                     <div class="d-flex flex-wrap gap-3">
-                        <button class="btn btn-primary btn-lg pulse-button">Get Started</button>
-                        <button class="btn btn-outline-dark btn-lg">Browse Courses</button>
+                        <a href="signup.html" class="btn btn-primary btn-lg pulse-button">Get Started</a>
+                        <a href="courses.html" class="btn btn-outline-dark btn-lg">Browse Courses</a>
                     </div>
                     <div class="mt-5 d-flex align-items-center stats-container">
                         <div class="me-4">
@@ -73,7 +113,7 @@
                 </div>
                 <div class="col-lg-6 position-relative" data-aos="fade-left" data-aos-duration="1000">
                     <div class="hero-image-wrapper">
-                        <img src="https://source.unsplash.com/random/600x600/?learning" alt="Learning illustration" class="img-fluid rounded-4 shadow-lg">
+                        <img src="images/hero-learning.jpg" alt="Learning illustration" class="img-fluid rounded-4 shadow-lg">
                         <div class="floating-card floating-card-1">
                             <i class="fas fa-graduation-cap text-primary"></i>
                             <span>500+ Courses</span>
@@ -101,7 +141,7 @@
                     <p class="lead" data-aos="fade-up" data-aos-delay="200">Explore our selection of premium courses designed to help you master new skills.</p>
                 </div>
                 <div class="col-lg-5 text-lg-end align-self-end" data-aos="fade-left">
-                    <button class="btn btn-outline-primary">View All Courses</button>
+                    <a href="courses.html" class="btn btn-outline-primary">View All Courses</a>
                 </div>
             </div>
             
@@ -112,7 +152,9 @@
                     <div class="swiper-slide">
                         <div class="card course-card h-100">
                             <div class="card-badge">Bestseller</div>
-                            <img src="https://source.unsplash.com/random/300x200/?webdesign" class="card-img-top" alt="Web Design Course">
+                            <a href="course-details.html?course=web-design">
+                                <img src="images/webdesign.jpg" class="card-img-top" alt="Web Design Course">
+                            </a>
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3">
                                     <span class="badge bg-light text-dark">Web Design</span>
@@ -121,7 +163,9 @@
                                         <span>4.9 (2.5k)</span>
                                     </div>
                                 </div>
-                                <h5 class="card-title">Modern Web Design Mastery</h5>
+                                <a href="course-details.html?course=web-design" class="text-decoration-none">
+                                    <h5 class="card-title">Modern Web Design Mastery</h5>
+                                </a>
                                 <p class="card-text">Master the art of creating responsive and beautiful websites using the latest technologies.</p>
                                 <div class="course-meta">
                                     <div><i class="far fa-clock"></i> 42 hours</div>
@@ -130,7 +174,7 @@
                             </div>
                             <div class="card-footer d-flex justify-content-between align-items-center">
                                 <strong class="text-primary">$59.99</strong>
-                                <button class="btn btn-sm btn-outline-primary">Add to Cart</button>
+                                <a href="cart.html?add=web-design" class="btn btn-sm btn-outline-primary add-to-cart" data-id="web-design">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -138,7 +182,9 @@
                     <!-- Course Card 2 -->
                     <div class="swiper-slide">
                         <div class="card course-card h-100">
-                            <img src="https://source.unsplash.com/random/300x200/?javascript" class="card-img-top" alt="JavaScript Course">
+                            <a href="course-details.html?course=javascript">
+                                <img src="images/javascript.jpg" class="card-img-top" alt="JavaScript Course">
+                            </a>
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3">
                                     <span class="badge bg-light text-dark">JavaScript</span>
@@ -147,7 +193,9 @@
                                         <span>4.8 (1.8k)</span>
                                     </div>
                                 </div>
-                                <h5 class="card-title">JavaScript for Beginners to Advanced</h5>
+                                <a href="course-details.html?course=javascript" class="text-decoration-none">
+                                    <h5 class="card-title">JavaScript for Beginners to Advanced</h5>
+                                </a>
                                 <p class="card-text">Complete JavaScript guide covering basics to advanced concepts like promises and async/await.</p>
                                 <div class="course-meta">
                                     <div><i class="far fa-clock"></i> 36 hours</div>
@@ -156,7 +204,7 @@
                             </div>
                             <div class="card-footer d-flex justify-content-between align-items-center">
                                 <strong class="text-primary">$49.99</strong>
-                                <button class="btn btn-sm btn-outline-primary">Add to Cart</button>
+                                <a href="cart.html?add=javascript" class="btn btn-sm btn-outline-primary add-to-cart" data-id="javascript">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -165,7 +213,9 @@
                     <div class="swiper-slide">
                         <div class="card course-card h-100">
                             <div class="card-badge">New</div>
-                            <img src="https://source.unsplash.com/random/300x200/?data" class="card-img-top" alt="Data Science Course">
+                            <a href="course-details.html?course=data-science">
+                                <img src="images/datascience.jpg" class="card-img-top" alt="Data Science Course">
+                            </a>
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3">
                                     <span class="badge bg-light text-dark">Data Science</span>
@@ -174,7 +224,9 @@
                                         <span>4.7 (950)</span>
                                     </div>
                                 </div>
-                                <h5 class="card-title">Data Science and Machine Learning Bootcamp</h5>
+                                <a href="course-details.html?course=data-science" class="text-decoration-none">
+                                    <h5 class="card-title">Data Science and Machine Learning Bootcamp</h5>
+                                </a>
                                 <p class="card-text">Learn to analyze data, build models and implement machine learning algorithms.</p>
                                 <div class="course-meta">
                                     <div><i class="far fa-clock"></i> 48 hours</div>
@@ -183,7 +235,7 @@
                             </div>
                             <div class="card-footer d-flex justify-content-between align-items-center">
                                 <strong class="text-primary">$69.99</strong>
-                                <button class="btn btn-sm btn-outline-primary">Add to Cart</button>
+                                <a href="cart.html?add=data-science" class="btn btn-sm btn-outline-primary add-to-cart" data-id="data-science">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -191,7 +243,9 @@
                     <!-- Course Card 4 -->
                     <div class="swiper-slide">
                         <div class="card course-card h-100">
-                            <img src="https://source.unsplash.com/random/300x200/?mobile" class="card-img-top" alt="Mobile Development Course">
+                            <a href="course-details.html?course=mobile-dev">
+                                <img src="images/mobiledev.jpg" class="card-img-top" alt="Mobile Development Course">
+                            </a>
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3">
                                     <span class="badge bg-light text-dark">Mobile Dev</span>
@@ -200,7 +254,9 @@
                                         <span>4.9 (1.2k)</span>
                                     </div>
                                 </div>
-                                <h5 class="card-title">Flutter Mobile App Development</h5>
+                                <a href="course-details.html?course=mobile-dev" class="text-decoration-none">
+                                    <h5 class="card-title">Flutter Mobile App Development</h5>
+                                </a>
                                 <p class="card-text">Build beautiful native apps for iOS and Android from a single codebase with Flutter.</p>
                                 <div class="course-meta">
                                     <div><i class="far fa-clock"></i> 38 hours</div>
@@ -209,7 +265,7 @@
                             </div>
                             <div class="card-footer d-flex justify-content-between align-items-center">
                                 <strong class="text-primary">$54.99</strong>
-                                <button class="btn btn-sm btn-outline-primary">Add to Cart</button>
+                                <a href="cart.html?add=mobile-dev" class="btn btn-sm btn-outline-primary add-to-cart" data-id="mobile-dev">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -220,7 +276,7 @@
     </section>
 
     <!-- Stats Section with Parallax -->
-    <section class="stats-section parallax-section py-5" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/1600x900/?education">
+    <section class="stats-section parallax-section py-5" data-parallax="scroll" data-image-src="images/education-parallax.jpg">
         <div class="container py-5">
             <div class="row text-center text-white">
                 <div class="col-md-3 mb-4 mb-md-0" data-aos="fade-up">
@@ -263,11 +319,11 @@
                     <h4 class="text-gradient">Keshf LMS</h4>
                     <p class="opacity-75">A next generation learning platform empowering educators and students worldwide.</p>
                     <div class="social-icons mt-4">
-                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
@@ -283,11 +339,11 @@
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
                     <h6 class="text-white mb-4">Resources</h6>
                     <ul class="list-unstyled footer-links">
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Webinars</a></li>
-                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="webinars.html">Webinars</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-4">
@@ -308,9 +364,9 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <ul class="list-inline small mb-0">
-                        <li class="list-inline-item"><a href="#" class="opacity-75">Privacy Policy</a></li>
-                        <li class="list-inline-item"><a href="#" class="opacity-75">Terms of Use</a></li>
-                        <li class="list-inline-item"><a href="#" class="opacity-75">Cookie Policy</a></li>
+                        <li class="list-inline-item"><a href="privacy-policy.html" class="opacity-75">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="terms-of-use.html" class="opacity-75">Terms of Use</a></li>
+                        <li class="list-inline-item"><a href="cookie-policy.html" class="opacity-75">Cookie Policy</a></li>
                     </ul>
                 </div>
             </div>
