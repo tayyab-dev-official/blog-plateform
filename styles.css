@@ -1077,6 +1077,16 @@ ul {
     text-align: center;
 }
 
+/* Show the dropdown menu when parent is clicked - Bootstrap will handle this */
+.dropdown.show .dropdown-menu {
+    display: block;
+}
+
+/* Prevent always-visible custom Resources dropdown */
+.resources-dropdown-menu {
+    display: none;
+}
+
 /* Responsive styles */
 @media (max-width: 1200px) {
     .hero-content h2 {
