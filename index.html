@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keshf LMS - A modern learning management system to transform your educational experience">
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Keshf LMS - Modern Learning Management System">
+    <meta property="og:description" content="Transform your learning experience with Keshf LMS, featuring interactive courses and progress tracking">
+    <meta property="og:image" content="https://keshflms.com/images/social-preview.jpg">
+    <meta property="og:url" content="https://keshflms.com">
+    <!-- PWA Support -->
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="manifest" href="manifest.json">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Title -->
+    <title>Keshf LMS - Learn From Anywhere</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper JS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Tailwind Elements -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Modern Style Enhancements -->
+    <link rel="stylesheet" href="modern-style.css">
+    <!-- PreloadJS for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <!-- Add Lottie animations support -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header class="main-header sticky-top">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Keshf LMS</h1>
+                </a>
+            </div>
+            
+            <!-- Mobile menu toggle button -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="#" data-bs-toggle="dropdown">Resources <i class="fas fa-chevron-down small ms-1"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Blog</a></li>
+                            <li><a class="dropdown-item" href="#">Documentation</a></li>
+                            <li><a class="dropdown-item" href="#">Community</a></li>
+                            <li><a class="dropdown-item" href="#">Tutorials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Log In</a>
+                <a href="signup.html" class="btn btn-signup ms-2">Sign Up</a>
+                <div class="cart-icon ms-3 position-relative">
+                    <a href="cart.html" class="text-dark fs-5"><i class="fas fa-shopping-cart"></i></a>
+                    <span class="cart-counter">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with 3D animation -->
+    <section class="hero-section position-relative overflow-hidden">
+        <div class="hero-particles" id="hero-particles"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="display-3 fw-bold text-gradient mb-4">Learn Without Limits</h1>
+                    <p class="lead mb-4">Access over 500+ courses from top instructors around the world. Interactive learning experiences designed for today's digital learners.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="signup.html" class="btn btn-primary btn-lg pulse-button">Get Started</a>
+                        <a href="courses.html" class="btn btn-outline-dark btn-lg">Browse Courses</a>
+                    </div>
+                    <div class="mt-5 d-flex align-items-center stats-container">
+                        <div class="me-4">
+                            <h3 class="counter-value fw-bold mb-0" data-val="10000">0</h3>
+                            <p class="text-muted small">Students</p>
+                        </div>
+                        <div class="me-4">
+                            <h3 class="counter-value fw-bold mb-0" data-val="500">0</h3>
+                            <p class="text-muted small">Courses</p>
+                        </div>
+                        <div>
+                            <h3 class="counter-value fw-bold mb-0" data-val="50">0</h3>
+                            <p class="text-muted small">Instructors</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 position-relative" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="hero-image-wrapper">
+                        <img src="images/hero-learning.jpg" alt="Learning illustration" class="img-fluid rounded-4 shadow-lg">
+                        <div class="floating-card floating-card-1">
+                            <i class="fas fa-graduation-cap text-primary"></i>
+                            <span>500+ Courses</span>
+                        </div>
+                        <div class="floating-card floating-card-2">
+                            <i class="fas fa-certificate text-success"></i>
+                            <span>Certified Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,288L48,277.3C96,267,192,245,288,240C384,235,480,245,576,240C672,235,768,213,864,208C960,203,1056,213,1152,224C1248,235,1344,245,1392,250.7L1440,256L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+    </section>
+
+    <!-- Featured Courses Section -->
+    <section class="featured-courses py-5">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-lg-7">
+                    <h6 class="text-primary fw-bold" data-aos="fade-up">FEATURED COURSES</h6>
+                    <h2 class="display-5 fw-bold" data-aos="fade-up" data-aos-delay="100">Top Rated Learning Materials</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">Explore our selection of premium courses designed to help you master new skills.</p>
+                </div>
+                <div class="col-lg-5 text-lg-end align-self-end" data-aos="fade-left">
+                    <a href="courses.html" class="btn btn-outline-primary">View All Courses</a>
+                </div>
+            </div>
+            
+            <!-- Course Cards Slider -->
+            <div class="swiper course-slider" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <!-- Course Card 1 -->
+                    <div class="swiper-slide">
+                        <div class="card course-card h-100">
+                            <div class="card-badge">Bestseller</div>
+                            <a href="course-details.html?course=web-design">
+                                <img src="images/webdesign.jpg" class="card-img-top" alt="Web Design Course">
+                            </a>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="badge bg-light text-dark">Web Design</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9 (2.5k)</span>
+                                    </div>
+                                </div>
+                                <a href="course-details.html?course=web-design" class="text-decoration-none">
+                                    <h5 class="card-title">Modern Web Design Mastery</h5>
+                                </a>
+                                <p class="card-text">Master the art of creating responsive and beautiful websites using the latest technologies.</p>
+                                <div class="course-meta">
+                                    <div><i class="far fa-clock"></i> 42 hours</div>
+                                    <div><i class="far fa-user"></i> Beginner</div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <strong class="text-primary">$59.99</strong>
+                                <a href="cart.html?add=web-design" class="btn btn-sm btn-outline-primary add-to-cart" data-id="web-design">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course Card 2 -->
+                    <div class="swiper-slide">
+                        <div class="card course-card h-100">
+                            <a href="course-details.html?course=javascript">
+                                <img src="images/javascript.jpg" class="card-img-top" alt="JavaScript Course">
+                            </a>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="badge bg-light text-dark">JavaScript</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8 (1.8k)</span>
+                                    </div>
+                                </div>
+                                <a href="course-details.html?course=javascript" class="text-decoration-none">
+                                    <h5 class="card-title">JavaScript for Beginners to Advanced</h5>
+                                </a>
+                                <p class="card-text">Complete JavaScript guide covering basics to advanced concepts like promises and async/await.</p>
+                                <div class="course-meta">
+                                    <div><i class="far fa-clock"></i> 36 hours</div>
+                                    <div><i class="far fa-user"></i> All Levels</div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <strong class="text-primary">$49.99</strong>
+                                <a href="cart.html?add=javascript" class="btn btn-sm btn-outline-primary add-to-cart" data-id="javascript">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course Card 3 -->
+                    <div class="swiper-slide">
+                        <div class="card course-card h-100">
+                            <div class="card-badge">New</div>
+                            <a href="course-details.html?course=data-science">
+                                <img src="images/datascience.jpg" class="card-img-top" alt="Data Science Course">
+                            </a>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="badge bg-light text-dark">Data Science</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.7 (950)</span>
+                                    </div>
+                                </div>
+                                <a href="course-details.html?course=data-science" class="text-decoration-none">
+                                    <h5 class="card-title">Data Science and Machine Learning Bootcamp</h5>
+                                </a>
+                                <p class="card-text">Learn to analyze data, build models and implement machine learning algorithms.</p>
+                                <div class="course-meta">
+                                    <div><i class="far fa-clock"></i> 48 hours</div>
+                                    <div><i class="far fa-user"></i> Intermediate</div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <strong class="text-primary">$69.99</strong>
+                                <a href="cart.html?add=data-science" class="btn btn-sm btn-outline-primary add-to-cart" data-id="data-science">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course Card 4 -->
+                    <div class="swiper-slide">
+                        <div class="card course-card h-100">
+                            <a href="course-details.html?course=mobile-dev">
+                                <img src="images/mobiledev.jpg" class="card-img-top" alt="Mobile Development Course">
+                            </a>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="badge bg-light text-dark">Mobile Dev</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9 (1.2k)</span>
+                                    </div>
+                                </div>
+                                <a href="course-details.html?course=mobile-dev" class="text-decoration-none">
+                                    <h5 class="card-title">Flutter Mobile App Development</h5>
+                                </a>
+                                <p class="card-text">Build beautiful native apps for iOS and Android from a single codebase with Flutter.</p>
+                                <div class="course-meta">
+                                    <div><i class="far fa-clock"></i> 38 hours</div>
+                                    <div><i class="far fa-user"></i> Intermediate</div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <strong class="text-primary">$54.99</strong>
+                                <a href="cart.html?add=mobile-dev" class="btn btn-sm btn-outline-primary add-to-cart" data-id="mobile-dev">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section with Parallax -->
+    <section class="stats-section parallax-section py-5" data-parallax="scroll" data-image-src="images/education-parallax.jpg">
+        <div class="container py-5">
+            <div class="row text-center text-white">
+                <div class="col-md-3 mb-4 mb-md-0" data-aos="fade-up">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users fa-3x"></i></div>
+                        <h2 class="counter-value display-4 fw-bold" data-val="10000">0</h2>
+                        <p class="lead">Active Learners</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-book-open fa-3x"></i></div>
+                        <h2 class="counter-value display-4 fw-bold" data-val="500">0</h2>
+                        <p class="lead">Total Courses</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-graduation-cap fa-3x"></i></div>
+                        <h2 class="counter-value display-4 fw-bold" data-val="15000">0</h2>
+                        <p class="lead">Graduates</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-trophy fa-3x"></i></div>
+                        <h2 class="counter-value display-4 fw-bold" data-val="12">0</h2>
+                        <p class="lead">Awards Won</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="text-gradient">Keshf LMS</h4>
+                    <p class="opacity-75">A next generation learning platform empowering educators and students worldwide.</p>
+                    <div class="social-icons mt-4">
+                        <a href="https://facebook.com" target="_blank" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="text-white mb-4">Quick Links</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="text-white mb-4">Resources</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="webinars.html">Webinars</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h6 class="text-white mb-4">Subscribe to Newsletter</h6>
+                    <p class="opacity-75">Get the latest news and updates delivered straight to your inbox</p>
+                    <form class="newsletter-form mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email address">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small opacity-75 mb-md-0">© 2025 Keshf LMS. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline small mb-0">
+                        <li class="list-inline-item"><a href="privacy-policy.html" class="opacity-75">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="terms-of-use.html" class="opacity-75">Terms of Use</a></li>
+                        <li class="list-inline-item"><a href="cookie-policy.html" class="opacity-75">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="back-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Theme Toggle Button -->
+    <button type="button" class="btn btn-outline-dark btn-floating btn-lg theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Scripts Section -->
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- AOS Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Parallax JS -->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.5.0/parallax.min.js"></script>
+    <!-- Particles JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

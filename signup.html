@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Keshf LMS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modern-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Sign-In API -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- Facebook SDK -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .signup-wrapper {
+            flex: 1;
+            padding: 60px 0;
+        }
+        .signup-card {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .signup-header {
+            background: linear-gradient(90deg, var(--primary-color), #8b5cf6);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+        .signup-body {
+            padding: 40px;
+        }
+        .signup-footer {
+            padding: 20px 30px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .social-signup-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .social-signup-btn:hover {
+            background-color: #f8f9fa;
+            transform: translateY(-2px);
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .divider span {
+            padding: 0 10px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        .form-control:focus {
+            box-shadow: none;
+            border-color: var(--primary-color);
+        }
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits-list li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+        .benefits-list li i {
+            margin-right: 10px;
+            color: var(--success-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header class="main-header sticky-top">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Keshf LMS</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="#" data-bs-toggle="dropdown">Resources <i class="fas fa-chevron-down small ms-1"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="documentation.html">Documentation</a></li>
+                            <li><a class="dropdown-item" href="community.html">Community</a></li>
+                            <li><a class="dropdown-item" href="tutorials.html">Tutorials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Log In</a>
+                <a href="signup.html" class="btn btn-signup ms-2 active">Sign Up</a>
+                <div class="cart-icon ms-3 position-relative">
+                    <a href="cart.html" class="text-dark fs-5"><i class="fas fa-shopping-cart"></i></a>
+                    <span class="cart-counter">0</span>
+                </div>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Signup Section -->
+    <section class="signup-wrapper">
+        <div class="container">
+            <div class="signup-card bg-white">
+                <div class="signup-header">
+                    <h2 class="mb-0">Create Your Account</h2>
+                    <p class="mb-0">Join thousands of learners on Keshf LMS</p>
+                </div>
+                <div class="signup-body">
+                    <div class="row">
+                        <div class="col-lg-7 pe-lg-4 border-end">
+                            <!-- Social Signup Buttons -->
+                            <div class="social-signup mb-4">
+                                <!-- Google Sign-In button -->
+                                <div id="google-signin-container" class="mb-2"></div>
+                                
+                                <!-- Facebook Sign-In button -->
+                                <button id="facebook-signin-btn" class="social-signup-btn">
+                                    <i class="fab fa-facebook-f text-primary"></i>
+                                    <span>Continue with Facebook</span>
+                                </button>
+                            </div>
+                            
+                            <!-- Divider -->
+                            <div class="divider">
+                                <span>OR</span>
+                            </div>
+                            
+                            <!-- Signup Form -->
+                            <form action="dashboard.html" method="get">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+                                    <small class="text-muted">Use 8+ characters with a mix of letters, numbers & symbols</small>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                                </div>
+                                <div class="mb-4 form-check">
+                                    <input type="checkbox" class="form-check-input" id="termsConditions" required>
+                                    <label class="form-check-label" for="termsConditions">
+                                        I agree to the <a href="terms-of-use.html">Terms of Service</a> and <a href="privacy-policy.html">Privacy Policy</a>
+                                    </label>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">Create Account</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="col-lg-5 ps-lg-4 mt-4 mt-lg-0">
+                            <h4 class="fw-bold mb-4">Why Join Keshf LMS?</h4>
+                            <ul class="benefits-list">
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Access to 500+ high-quality courses</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Learn at your own pace, anytime</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Personalized learning recommendations</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Certificates upon course completion</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Interactive quizzes and assignments</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Expert instructors and industry leaders</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Community forums and discussion groups</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="testimonial bg-light p-3 rounded mt-4">
+                                <p class="fst-italic mb-2">"Joining Keshf LMS was one of the best decisions I've made for my career. The courses are comprehensive and the interactive learning approach is exceptional!"</p>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Testimonial" class="rounded-circle" width="40" height="40">
+                                    <div class="ms-2">
+                                        <strong>Sarah Johnson</strong>
+                                        <div class="text-muted small">Web Developer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="signup-footer">
+                    <p class="mb-0">Already have an account? <a href="login.html" class="text-decoration-none">Log in</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="text-gradient">Keshf LMS</h4>
+                    <p class="opacity-75">A next generation learning platform empowering educators and students worldwide.</p>
+                    <div class="social-icons mt-4">
+                        <a href="https://facebook.com" target="_blank" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="text-white mb-4">Quick Links</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="text-white mb-4">Resources</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="webinars.html">Webinars</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h6 class="text-white mb-4">Subscribe to Newsletter</h6>
+                    <p class="opacity-75">Get the latest news and updates delivered straight to your inbox</p>
+                    <form class="newsletter-form mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email address">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small opacity-75 mb-md-0">© 2025 Keshf LMS. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline small mb-0">
+                        <li class="list-inline-item"><a href="privacy-policy.html" class="opacity-75">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="terms-of-use.html" class="opacity-75">Terms of Use</a></li>
+                        <li class="list-inline-item"><a href="cookie-policy.html" class="opacity-75">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Authentication JS -->
+    <script src="js/auth/authentication.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
